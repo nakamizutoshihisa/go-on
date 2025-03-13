@@ -1,0 +1,25 @@
+name: FTP Deploy
+
+on:
+  push:
+    branches:
+      - main # トリガーとなるブランチを指定
+
+jobs:
+  ftp-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    # 1. リポジトリのコードをチェックアウト
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    # 2. FTPでファイルをアップロード
+    - name: FTP Deploy
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.0
+      with:
+        server: ${{ secrets.FTP_SERVER }} # FTPサーバーのURL（例: ftp://yourserver.com）
+        username: ${{ secrets.FTP_USERNAME }} # FTPユーザー名
+        password: ${{ secrets.FTP_PASSWORD }} # FTPパスワード
+        local-dir: site/ # リポジトリのルートをアップロード
+        server-dir: go-on.design/public_html/ # FTPサーバー上のアップロード先ディレクトリ
