@@ -6904,3 +6904,11 @@ form textarea:required:valid {
 /* ------------------------------------------------*/
 /* Features Contact Data End */
 /* ------------------------------------------------*/
+
+/* Override */
+/* .headline__title, .title__line, .headline__datamobile {
+	font-family: "Noto Sans JP", "Roboto", sans-serif;
+	font-family: "BIZ UDPGothic", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  } */
