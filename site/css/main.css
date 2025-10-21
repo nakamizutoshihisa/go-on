@@ -3922,6 +3922,39 @@ form textarea:required:valid {
   }
 }
 
+.divider-image-xl-2,
+.divider-video-xl-2 {
+  background-repeat: no-repeat;
+  background-position: center;
+  -moz-background-size: cover;
+       background-size: cover;
+  height: 100%;
+}
+@media only screen and (min-width: 768px) {
+  .divider-image-xl-2,
+  .divider-video-xl-2 {
+    height: 500px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .divider-image-xl-2,
+  .divider-video-xl-2 {
+    height: 600px;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .divider-image-xl-2,
+  .divider-video-xl-2 {
+    height: 700px;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  .divider-image-xl-2,
+  .divider-video-xl-2 {
+    height: 800px;
+  }
+}
+
 .section-title__name {
   margin-bottom: 0.4rem;
 }
